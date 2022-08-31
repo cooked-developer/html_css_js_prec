@@ -1,0 +1,110 @@
+
+@media screen and (min-width: 800px) {
+
+    .navBar {
+        width: 100%;
+        height: 80px;
+        background: rgb(2, 17, 51);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .box1 {
+        width: 25%;
+        height: 30px;
+        /* background: red; */
+        margin: 0px;
+        font-size: 20px;
+        /* border: 5px solid yellow; */
+        padding: 20px;
+    }
+    
+    .box2 {
+        /* background-color: blueviolet; */
+        width: 50%;
+        height: 30px;
+        display: flex;
+        /* background: yellowgreen; */
+        justify-content: space-around;
+        margin: 5px 0px 0px 0px;
+        font-size: 12px;
+        /* border: 5px solid yellow; */
+        padding: 20px;
+    
+    }
+    
+    .box3 {
+        /* background-color: aqua; */
+        width: 25%;
+        height: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 5px 0px 0px 0px;
+        font-size: 16px;
+        /* border: 5px solid yellow; */
+        padding: 20px;
+    }
+    
+    a {
+        color: white;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .navBar {
+        flex-direction: column;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        background: rgb(2, 17, 51);
+        color: white;
+
+    } 
+
+    .box1 {
+        /* background-color: blueviolet; */
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .box2 {
+        display: flex;
+        flex-direction: column;
+        /* background-color: coral; */
+        height: 150px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box3 {
+        /* background-color: darkred; */
+        height: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    a {
+        color: white;
+    }
+
+    #icon1 {
+        margin-left: 10px;
+        /* width: 40px; */
+        /* background-color: aqua; */
+    }
+
+    #icon2 {
+        margin-left: 10px;
+        /* width: 70px; */
+        /* background-color: burlywood; */
+    }
+}
