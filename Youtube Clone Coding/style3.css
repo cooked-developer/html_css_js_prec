@@ -1,0 +1,151 @@
+:root {
+    --text-color: black;
+    --header_text-color: white;
+    --header_icon-color: red;
+    --click_up-color: rgb(1, 100, 212);
+    --hashtag-color: rgb(24, 122, 214);
+    --not_accent-color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+.youtube__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-color);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.left_icon {
+    margin-left: 5px;
+}
+
+.left_icon #youtube_icon {
+    color: var(--header_icon-color);
+}
+
+.left_icon #youtube_text {
+    color: var(--header_text-color);
+}
+
+.right_icon {
+    margin-right: 5px;
+}
+
+.right_icon #header_serch {
+    color: var(--header_text-color);
+}
+
+.right_icon #header_add {
+    color: var(--header_text-color);
+}
+
+.youtube__video {
+    position: sticky;
+}
+
+.hashtag {
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.hashtag a {
+    color: var(--hashtag-color);
+    font-size: 13px;
+}
+
+.title {
+    display: flex;
+}
+
+.title .text1 {
+    font-weight: bold;
+    margin: 5px;
+    /* padding: 1px; */
+}
+
+.title .text2 {
+    color: var(--not_accent-color);
+    font-size: 10px;
+    margin: 5px;
+    /* padding: 5px; */
+}
+
+.title a {
+    color: var(--not_accent-color);
+    font-size: 8px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.signs {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+
+}
+
+.signs a {
+    display: flex;
+    color: var(--not_accent-color);
+    justify-content: center;
+    padding: 5px;
+}
+
+.signs .thumbs_up i {
+    color: var(--click_up-color);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel_icon {
+    display: flex;
+    padding: 5px;
+}
+
+.channel_icon i {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.channel_icon .icon_text {
+    margin-left: 10px;
+    align-items: center;
+}
+
+.channel_icon .icon_text .channel_name {
+    font-weight: bold;
+}
+
+.channel_icon .icon_text .sub_number {
+    font-size: 10px;
+    color: var(--not_accent-color);
+}
+
+.channel .subscribe {
+    font-weight: bold;
+    font-size: 13px;
+    color: var(--not_accent-color);
+    margin-right: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+hr {
+    margin: 0 5
+}
