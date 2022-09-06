@@ -12,6 +12,7 @@ a {
 }
 
 body {
+    font-family: Roboto;
     margin: 0;
 }
 
@@ -49,6 +50,12 @@ body {
 
 .youtube__video {
     position: sticky;
+    top: 0;
+}
+
+.youtube__video iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .hashtag {
@@ -112,6 +119,7 @@ body {
 .channel_icon {
     display: flex;
     padding: 5px;
+    margin-left: 5px;
 }
 
 .channel_icon i {
@@ -144,8 +152,66 @@ body {
     align-items: center;
 }
 
-
-
 hr {
-    margin: 0 5
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nextVideos__upnext {
+    color: var(--not_accent-color);
+    font-size: 15px;
+    margin: 0px 0px 10px 10px;
+}
+
+.nextVideos__box {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nextVideos__picture img {
+    width: 150px;
+    height: 100px;
+    margin: 0px 5px 0px 10px;
+}
+
+.nextVideos__title {
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nextVideos__title1 {
+    font-weight: bold;
+}
+
+.nextVideos__title2 {
+    font-size: 13px;
+    color: var(--not_accent-color);
+}
+
+.nextVideos__title3 {
+    font-size: 10px;
+    color: var(--not_accent-color);
+}
+
+.nextVideos__add_button {
+    margin: 5px 10px 0px 10px;
+}
+
+@media (min-width: 800px) {
+
+    .youtube__introductionWithNextVideos {
+        display: flex; 
+    }
+
+    .youtube__allOfNextVideos {
+        font-size: 80%;
+    }
+
+    .youtube__nextVideos {
+        /* font-size: 80%; */
+    }
+
 }
