@@ -1,0 +1,15 @@
+.level1 {
+    font-size: 2em; /* 16px * 2 = 32px */
+}
+
+.level2 {
+    font-size: 2em; /* 32px * 2 = 64px */
+}
+
+.level3 {
+    font-size: 2em; /* 64px * 2 = 128px */
+}
+
+.level4 {
+    font-size: 2em; /* 128px * 2 = 256px */
+}
