@@ -171,6 +171,7 @@ hello(); // IIFE
 // function calculate(command, a, b)
 // command: add, substract, divide, multiply, remainder
 
+// mine
 function calculate(command, a, b) {
     switch (command) {
         case "add":
@@ -195,6 +196,22 @@ function calculate(command, a, b) {
 }
 calculate('substract', 3, 5);
 
-
-
+// ellie
+function calculate(command, a, b) {
+  switch (command) {
+    case 'add':
+      return a + b;
+    case 'substract':
+      return a - b;
+    case 'divide':
+      return a / b;
+    case 'multiply':
+      return a * b;
+    case 'remainder':
+      return a % b;
+    default:
+      throw Error('unknown command');
+  }
+}
+console.log(calculate('divide', 3, 9));
 
