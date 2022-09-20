@@ -70,40 +70,62 @@
   // Q5. find a student with the score 90
   {
     // mine === ellie
-    const result = students.find((students) => students.score === 90); 
+    const result = students.find((student) => student.score === 90); 
     console.log(result); // Student {name: 'C', age: 30, enrolled: true, score: 90}
-    // : find 함수는 (true)가 될 때까지 찾다가 (true)인 것을 1가지 찾으면 거기서 끝이난다.
+    // : find는 첫번째로 true가 나오면 해당하는 그 배열의 요소를 return 해주는 api 이다. 첫번째만 찾고 멈춘다. 
   }
   
   // Q6. make an array of enrolled students
   {
-    const array2 = students.filter(students => students.enrolled === true);
-    console.log(array2); // (3) [Student, Student, Student]
+    // mine === ellie
+    const result = students.filter((student) => student.enrolled); // true된 값만 찾아오는거니 student.enrolled === true에서 === true는 생략해도 되네.
+    console.log(result); // (3) [Student, Student, Student]
   }
   
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
   {
-    // const array = students.filter(students.score);
-    // console.log(array);
+    // mine : 못품 
+    // 아직 api 영어로 읽어도 잘 안와닿아서 map을 읽어보고도 사용 못함...
+    // filter를 정확히 파악 못해서 그런지 filter로 찾으려고 했네...
+    // const result2 = students.filter(Student => Student.score);
+    // const result = students.score;
+    // const scoreResult = [];
+    // for (let i = 0; i < students.length; i++) {
+    //   scoreResult = students[i].score;
+    // }
+    // console.log(scoreResult);
 
+    // ellie
+       const result = students.map((student) => student.score);
+       console.log(result); // [45, 80, 90, 66, 88]
   }
   
   // Q8. check if there is a student with the score lower than 50
   {
-    console.log(students.includes(students.score < 50));
+    // mine
+    console.log(students.includes(students.score < 50)); // false
+
+    // ellie
+
   }
   
   // Q9. compute students' average score
   {
+    // mine : 못품
+    // ellie
   }
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
+    // mine : 못품
+    // ellie
   }
   
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
+    // mine : 못품
+    // ellie
   }
