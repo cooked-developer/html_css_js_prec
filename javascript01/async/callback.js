@@ -28,18 +28,18 @@ function printImmediately(print) {
     print();
 }
 printImmediately(() => console.log('hello')); // 동기
-// : 위에 1, 3과 여기의 hello가 동기적으로 바로 출력이 되고 
-// 2는 1초뒤에 비동기적으로 출력이 된다. 
+// : 위에 '1', '3'과 여기의 'hello'가 동기적으로 바로 출력이 되고 
+// '2'는 1초뒤에 비동기적으로 출력이 된다. 
 
 // Asynchronous callback
 function printWithDelay(print, timeout) {
     setTimeout(print, timeout);
 }
-printWithDelay(() => console.log('bye'), 2000); // 비동기
-// : 위에 1, 3, hello가 동기적으로 바로 출력이 되고 
-// 2는 1초뒤에 그리고 bye는 2초뒤에 비동기적으로 나중에 출력이 된다.
+printWithDelay(() => console.log('async callback'), 2000); // 비동기
+// : 위에 '1', '3', 'hello'가 동기적으로 바로 출력이 되고 
+// '2'는 1초뒤에 그리고 'async callback'는 2초뒤에 비동기적으로 나중에 출력이 된다.
 
-// Callback Hell example
+// 3. Callback Hell example
 class UserStorage {
     loginUser(id, password, onSuccess, onError) {
         setTimeout(() => {
@@ -65,13 +65,32 @@ class UserStorage {
     }
 }
 
-const user = new UserStorage();
-// user.loginUser();
-// user.loginUser('ellie', );
-const id = user.loginUser();
+const userStorage = new UserStorage();
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+userStorage.loginUser(
+    id, 
+    password, 
+    user => {
+        userStorage.getRoles(
+            user, 
+            userWithRole => {
+                alert(`Hello ${userWithRole.name}, you hava a ${userWithRole.role} role`);
+            }, 
+            error => {
+                console.log(error);
+            }
+            )
+    }, 
+    error => {
+        console.log(error)
+    }
+    );
 
-
-
+// 4. 콜백 체인의 문제점 // 콜백 안에 또 콜백이 그리고 그안에 또 콜백이...
+// : 읽기가 불편하다. 가독성이 떨어진다.
+// 디버깅하고 유지보수 하기가 어렵다. 어디서 잘못된지 찾기가 어려워서
+// 이런 이유로 콜백지옥이라는 말이 많이 나오게 된다. 이런식으로 코딩을 하는 것은 좋지 않다.
 
 
 
